@@ -1,0 +1,90 @@
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease, @direction: normal) {
+  -webkit-animation: @name @duration @delay @ease @direction;
+  -moz-animation:    @name @duration @delay @ease @direction;
+  -ms-animation:     @name @duration @delay @ease @direction;
+}
+
+.animation-duration (@duration) {
+  -webkit-animation-duration: @duration;
+  -moz-animation-duration:    @duration;
+  -ms-animation-duration:     @duration;
+}
+
+.animation-delay (@delay) {
+  -webkit-animation-duration: @delay;
+  -moz-animation-duration:    @delay;
+  -ms-animation-duration:     @delay;
+}
+.animation-timing-function (@function: ease) {
+  -webkit-animation-timing-function: @function;
+  -moz-animation-timing-function:    @function;
+  animation-timing-function:         @function;
+}
+
+.background-clip (@argument: padding-box) {
+  -moz-background-clip:    @argument;
+  -webkit-background-clip: @argument;
+  background-clip:         @argument;
+}
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius:    @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius:  @bottomleft;
+  -webkit-border-top-left-radius:     @topleft;
+  -moz-border-radius-topright:        @topright;
+  -moz-border-radius-bottomright:     @bottomright;
+  -moz-border-radius-bottomleft:      @bottomleft;
+  -moz-border-radius-topleft:         @topleft;
+  border-top-right-radius:            @topright;
+  border-bottom-right-radius:         @bottomright;
+  border-bottom-left-radius:          @bottomleft;
+  border-top-left-radius:             @topleft;
+.background-clip(padding-box);
+}
+
+.font(@color: black, @family, @size: 12px, @weight: 100, @space: 0px) {
+  color:          @color;
+  font-family:    @family;
+  font-size:      @size;
+  font-weight:    @weight;
+  letter-spacing: @space;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.opacity (@opacity: 0.5) {
+  -webkit-opacity: @opacity;
+  -moz-opacity:    @opacity;
+  opacity:         @opacity;
+}
+
+.perspective (@perspective, @origin) {
+  -webkit-perspective:        @perspective;
+  -moz-perspective:           @perspective;
+  perspective:                @perspective;
+  -webkit-perspective-origin: @origin;
+  -moz-perspective-origin:    @origin;
+  pespective-origin:          @origin;
+}
+.transform (@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+  transform:         @string;
+}
+
+.transition (@property @time) {
+  -webkit-transition: @property @time;
+  -moz-transition:    @property @time;
+  -o-transition:      @property @time;
+  -ms-transition:     @property @time;
+  transition:         @property @time;
+}

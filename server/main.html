@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mouthsounds | ( ͡° ͜ʖ ͡°)</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <video id="backgroundvideo" autoplay preload="auto" poster="imgs/rosebush.jpg">
+      <source src="videos/rose_bushes.mp4" type="video/mp4"/>
+      <source src="videos/rose_bushessd.webm" type="video/webm" />
+      <source src="videos/rose_bushes.ogv" type="video/ogg" />
+      Your browser doesn't currently support HTML5 Video!
+    </video>
+    <div id="bgoverlay"></div>
+    <span id="suitortitle">MOUTHSOUNDS</span>
+    <span id="promptworkslove">We were in a dark place when we made this.</span>
+    <div class="btn-container">
+      <a href="https://chrome.google.com/webstore/detail/mouthsounds/mffikfabjgdafkejajgkbheipanihnfh?utm_source=gmail" class="btn center">Troll Mode Activate</a>
+    </div>
+
+    
+    <!--Scripts! For the website!-->
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/jquery/dist/maximage.min.js"></script>
+    <script>
+      jQuery(document).ready(function() {
+        $('#backgroundvideo').hide(0).fadeIn(1500);
+      });
+    </script>
+    <script type='text/javascript'>
+      document.getElementById('backgroundvideo').addEventListener('ended',myHandler,false);
+      function myHandler(e) {
+          if(!e) { e = window.event; }
+          console.log("ended");
+          this.currentTime = 1;
+          this.play();
+      }
+    </script>
+    <script>
+      $(function(){
+        // Helper function to Fill and Center the HTML5 Video
+        jQuery('video, object').maximage('maxcover');
+      });
+    </script>
+  </body>
+</html>
